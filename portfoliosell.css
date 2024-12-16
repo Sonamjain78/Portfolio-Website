@@ -1,0 +1,457 @@
+/* General Body Styling */
+body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Tagline Section with Background Transition */
+.tagline {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c); /* Initial gradient */
+    animation: colorTransition 8s infinite; /* Smooth color transition */
+    color: white;
+    position: relative;
+    z-index: -1;
+}
+
+.tagline-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tagline h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline .highlight {
+    color: #ffd700; /* Golden color */
+    text-decoration: underline;
+}
+
+.tagline p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Background Color Transition Keyframes */
+@keyframes colorTransition {
+    0% {
+        background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    }
+    25% {
+        background: linear-gradient(90deg, #ff758c, #ffd700);
+    }
+    50% {
+        background: linear-gradient(90deg, #ffd700, #7effb3);
+    }
+    75% {
+        background: linear-gradient(90deg, #7effb3, #7eb3ff);
+    }
+    100% {
+        background: linear-gradient(90deg, #7eb3ff, #ff7eb3);
+    }
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s ease-in-out;
+}
+.logo a:hover {
+    color: #ccc;
+}
+
+/* Navigation Links */
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav-bar li {
+    margin: 0 15px;
+}
+.nav-bar li:last-child {
+    margin-right: 50px; /* Adjust as needed */
+}
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.2s ease-in-out;
+}
+.nav-bar a:hover {
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+    }
+    .logo {
+        margin-bottom: 1em;
+    }
+    .nav-bar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-bar li {
+        margin: 10px 0;
+    }
+}
+
+.project-tagline {
+    width: 100%;
+    height: 80vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(90deg, #6a5acd, #00bfff); /* New gradient for project tagline */
+    animation: taglineTransition 8s infinite; /* Smooth color transition */
+    color: white;
+}
+
+.project-tagline .tagline-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project-tagline h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.project-tagline p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Keyframes for Tagline Background Transition */
+@keyframes taglineTransition {
+    0% {
+        background: linear-gradient(90deg, #6a5acd, #00bfff);
+    }
+    25% {
+        background: linear-gradient(90deg, #00bfff, #00fa9a);
+    }
+    50% {
+        background: linear-gradient(90deg, #00fa9a, #ff7f50);
+    }
+    75% {
+        background: linear-gradient(90deg, #ff7f50, #ff4500);
+    }
+    100% {
+        background: linear-gradient(90deg, #ff4500, #6a5acd);
+    }
+}
+
+/* Projects Container Styling */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px; /* Add padding to avoid overlap with the navbar */
+}
+
+/* Individual Project Card Styling */
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 200px; /* Fixed width for uniformity */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+/* Skills Header Styling */
+.skills-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+}
+
+.skills-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Individual Skill */
+.skill {
+    width: 80%;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.skill h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden; /* Ensures inner div does not overflow */
+}
+
+.progress {
+    height: 20px; /* Height of the progress bar */
+    background-color: #6a5acd; /* Unique color for the progress */
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out; /* Smooth transition for progress */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        width: 90%; /* Full width on smaller screens */
+    }
+}
+/* About Header Styling */
+.about-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Centering the container */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Profile Image */
+.profile-image {
+    flex: 1;
+    max-width: 300px; /* Maximum width for profile image */
+    margin: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+}
+
+/* About Content */
+.about-content {
+    flex: 2; /* Takes more space than the image */
+    margin: 20px;
+    text-align: left;
+    color: #333;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 20px;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items */
+    }
+    .profile-image {
+        margin: 0; /* Remove margins for smaller screens */
+    }
+}
+/* Contact Header Styling */
+.contact-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+/* Contact Container Styling */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+/* Contact Details Styling */
+.contact-details {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.contact-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-details,
+    .contact-form {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
